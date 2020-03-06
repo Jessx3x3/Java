@@ -12,7 +12,7 @@ public class Launcher {
 		System.out.println("Ingresa el número double de b: ");
 		double b = scanner.nextDouble();
 		
-		System.out.println("Hipotenusa para valores: \nA:"+a+"\nB:"+b);
+		System.out.println("\nHipotenusa para valores:\n \nA:"+a+"\nB:"+b+"\n");
 		
 		functionPitagoras(a , b);
 		
