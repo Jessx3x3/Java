@@ -97,12 +97,6 @@ public class BasicJava {
 	//Cambiando los Valores del Arreglo
 	public void cambiarValores(int [] array) {
 		
-		for (int i = 0; i < array.length -1; i++) {
-			array[i]=array[i+1];
-		}
-		array[array.length-1]=0;
-		System.out.println(array);
-		
 	}
 	//Arreglo con Números Impares
 	public void crearArray(ArrayList<Integer> num) {
