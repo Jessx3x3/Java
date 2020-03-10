@@ -1,6 +1,7 @@
 package bucle_array;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class BasicJava {
 
@@ -94,23 +95,45 @@ public class BasicJava {
 		
 	}
 	//Cambiando los Valores del Arreglo
-	public void cambiarValores() {
+	public void cambiarValores(int [] array) {
+		
+		for (int i = 0; i < array.length -1; i++) {
+			array[i]=array[i+1];
+		}
+		array[array.length-1]=0;
+		System.out.println(array);
 		
 	}
 	//Arreglo con Números Impares
-	public void crearArray(int[] value) {
+	public void crearArray(ArrayList<Integer> num) {
 		
-	}
-	//Elegir número y mostrar mayores al número
-	public void mayorValue(int[] value, int n) {
-
-	}
-	//Eliminar Números Negativos
-	public void eliminarValoresNegativos(int[] value) {
-		for (int i = 0; i < value.length; i++) {
-			if(value[i]<0) {
-				
+		ArrayList<Integer> newArray = new ArrayList<Integer>();
+		
+		for (int i = 0; i < num.size(); i++) {
+			
+			if((num.get(i)%2)!=0) {
+				newArray.add(num.get(i));
 			}
 		}
+		
+		System.out.println(newArray);
+	}
+	//Elegir número y mostrar mayores al número
+	public void mayorValue(ArrayList<Integer> num, int n) {
+		for (int i = 0; i < num.size(); i++) {
+			if(num.get(i)<=n) {
+				num.remove(i);
+			}
+		}
+		System.out.println(num);
+	}
+	//Eliminar Números Negativos
+	public void eliminarValoresNegativos(ArrayList<Integer> num) {
+		for (int i = 0; i < num.size(); i++) {
+			if(num.get(i)<0) {
+				num.remove(i);
+			}
+		}
+		System.out.println(num);
 	}
 }
