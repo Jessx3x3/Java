@@ -22,11 +22,13 @@ public class CodeExample {
        
         PuzzleJava puzzle = new PuzzleJava();
         
-        //puzzle.mayoresValores(myNumbers, 10);
-        //puzzle.arregloNombres(names);
-        //puzzle.alfabeto();
-        
-
+        puzzle.mayoresValores(myNumbers, 10);
+        puzzle.arregloNombres(names);
+        puzzle.alfabeto();
+        puzzle.arregloRandom(45, 55);
+        puzzle.randomOrder(45, 55);
+        puzzle.cadenaCaracteres();
+        puzzle.crearCadenasCaracteres();
 	}
 
 }

@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Random;
 
 public class PuzzleJava {
 
@@ -54,6 +55,78 @@ public class PuzzleJava {
 		System.out.println("La última letra: "+abc.get(25));
 		
 	}
+	
+	public void arregloRandom(int desde, int hasta) {
+		
+		Random numAleatorio = new Random();
+		
+		ArrayList<Integer> myNumbers = new ArrayList<Integer>();
+		
+		for (int i = 0; i < 10; i++) {
+			myNumbers.add(numAleatorio.nextInt(desde)+hasta);
+		}
+		System.out.println(myNumbers);
+		
+	}
+	
+	public void randomOrder(int desde, int hasta) {
+		
+		Random numAleatorio = new Random();
+		
+		ArrayList<Integer> myNumbers = new ArrayList<Integer>();
+		
+		int min = 0;
+		int max = 0;
+		
+		for (int i = 0; i < 10; i++) {
+			myNumbers.add(numAleatorio.nextInt(desde)+hasta);
+		}
+		Collections.sort(myNumbers);
+		System.out.println(myNumbers);
+		System.out.println("Valor mínimo: "+myNumbers.get(0));
+	}
+	
+	public void cadenaCaracteres() {
+		
+		ArrayList<Character> abc = new ArrayList<Character>();
+		
+		Random r = new Random();
+		
+		String alphabet = "abcdefghijklmnopqrstuwxyz";
+		
+		 for (int i = 0; i < 5; i++) {
+			
+			abc.add(alphabet.charAt(r.nextInt(alphabet.length())));
+		     
+		 }
+		 
+		System.out.println(abc);
+		
+	}
+	
+	public void crearCadenasCaracteres() {
+		
+		ArrayList<Character> abc = new ArrayList<Character>();
+		
+		Random r = new Random();
+		
+		String alphabet = "abcdefghijklmnopqrstuwxyz";
+		
+		char cadena = 0;
+
+		for (int i = 0; i < 5; i++) {
+			
+			for (int j = 0; j < 10; j++) {
+				abc.add(alphabet.charAt(r.nextInt(alphabet.length())));
+			}
+		     
+		 }
+			System.out.println(abc);
+			
+			System.out.println("Tamaño: "+abc.size());
+	}
+	
+	
 	
 	
 }
