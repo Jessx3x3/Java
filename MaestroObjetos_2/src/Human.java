@@ -13,21 +13,6 @@ public class Human {
 	public Human() {
 		
 	}
-	
-	void attack(Human human) {
-		
-		System.out.println("Inicial vida: ["+ human.getHealth()+"] de "+human.getName());
-		
-		human.setHealth(human.getHealth() - getStrength());
-		
-		System.out.println("Después del golpe: ["+ human.getHealth()+"] de "+getName());
-		
-		if(human.getHealth() <= 0) {
-			System.out.println("El participante: "+human.getName()+", falleció");
-		}
-		
-	}
-	
 	public String getName() {
 		return name;
 	}
@@ -57,5 +42,18 @@ public class Human {
 	}
 	public void setHealth(int health) {
 		this.health = health;
+	}
+	void attack(Human human) {
+		
+		System.out.println("Inicial vida: ["+ human.getHealth()+"] de "+human.getName());
+		
+		human.setHealth(human.getHealth() - getStrength());
+		
+		System.out.println("Después del golpe: ["+ human.getHealth()+"] de "+getName());
+		
+		if(human.getHealth() <= 0) {
+			System.out.println("El participante: "+human.getName()+", falleció");
+		}
+		
 	}
 }
